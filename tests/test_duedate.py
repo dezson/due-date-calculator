@@ -27,6 +27,10 @@ class TestGlobals(unittest.TestCase):
         self.assertIsNotNone(WORK_STARTING_HOUR)
         self.assertIsNotNone(WORK_HOURS)
 
+        self.assertGreater(WORK_STARTING_HOUR, 0)
+        self.assertGreater(WORK_ENDING_HOUR, 0)
+        self.assertGreater(WORK_ENDING_HOUR, WORK_STARTING_HOUR)
+
         self.assertEqual(WORK_ENDING_HOUR - WORK_STARTING_HOUR, WORK_HOURS)
 
 
